@@ -4,12 +4,23 @@ import Mensagem from './components/Mensagem.js';
 
 
 ReactDOM.render(
-  <div>
-    <Mensagem estilo="danger" texto="erro"/>
-    <Mensagem estilo="primary" texto="normal"/>
-    <Mensagem estilo="success" texto="sucesso" />
-    <Mensagem estilo="warning" texto="validacao" />
-    <Mensagem estilo="info" texto="informacao" />
-  </div>,
-  document.getElementById('root')
+    <div className="container">
+      <div className="row align-items-end bg-dark bg-opacity-75">
+        <div className="col">
+          <span className="badge rounded-pill bg-info text-dark">Success</span>
+        </div>
+      </div>
+      
+      <div className="row align-items-end bg-dark bg-opacity-100">
+        <div className="col">
+          <Mensagem estilo="danger" texto="erro" />
+        </div>
+        <div className="col">
+          <Mensagem estilo="primary" texto="normal" />
+        </div>
+        <div className="col">
+          <Mensagem estilo="success" texto="sucesso" />
+        </div>
+      </div>
+    </div>, document.getElementById('root')
 );
